@@ -1,0 +1,20 @@
+AdvancedNewFile
+Alignment
+AlignTab
+All Autocomplete
+BeautifyRuby
+BracketHighlighter
+Clickable URLs
+Clipboard Manager
+Colorsublime
+Comment-Snippets
+Crystal
+DocBlockr
+Gist
+GitGutter
+RSpec
+Search Anywhere
+SublimeLinter
+SublimeLinter-ruby
+Tag
+TodoReview
