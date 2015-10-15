@@ -9,7 +9,10 @@ Clipboard Manager
 Colorsublime
 Comment-Snippets
 Crystal
+DashDoc
 DocBlockr
+Elixir
+ElixirSublime
 Gist
 GitGutter
 RSpec
