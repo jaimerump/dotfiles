@@ -17,11 +17,12 @@ nvm install $latest # Whatever nvm's latest version is
 npm install -g pm2 nodemon mocha # Install universal packages
 
 # Install python
+# OS has python2.7 installed
+# Go to https://www.anaconda.com/distribution/#macos
 
 # Install mongo
-
-# Install mongo-tools
+brew install mongodb # Also installs mongo-tools
 
 # Install redis
-
-# 
+brew install redis
+brew services start redis # Have it running in the background all the time
