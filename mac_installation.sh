@@ -30,3 +30,13 @@ brew install mongodb # Also installs mongo-tools
 # Install redis
 brew install redis
 brew services start redis # Have it running in the background all the time
+
+# Install google cloud command line
+curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
+gcloud init # Opens Oauth screen in browser
+
+# Install aws cli
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
