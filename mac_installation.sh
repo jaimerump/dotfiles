@@ -20,6 +20,10 @@ npm install -g pm2 nodemon mocha # Install universal packages
 # OS has python2.7 installed
 # Go to https://www.anaconda.com/distribution/#macos
 
+# Install go
+# Download package installer from https://golang.org/dl/
+brew install dep
+
 # Install mongo
 brew install mongodb # Also installs mongo-tools
 
