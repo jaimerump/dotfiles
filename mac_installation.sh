@@ -40,3 +40,11 @@ gcloud init # Opens Oauth screen in browser
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# Install kubernetes
+brew install kubernetes-cli
+brew cask install minikube
+# Download virtualbox from here
+# https://www.virtualbox.org/wiki/Downloads
+# If installation fails, check this
+# https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5
