@@ -27,6 +27,9 @@ brew install dep
 # Install mongo
 brew install mongodb # Also installs mongo-tools
 
+# Install postgres
+brew install postgresql
+
 # Install redis
 brew install redis
 brew services start redis # Have it running in the background all the time
@@ -48,3 +51,6 @@ brew cask install minikube
 # https://www.virtualbox.org/wiki/Downloads
 # If installation fails, check this
 # https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5
+
+# Install terraform
+brew install terraform
