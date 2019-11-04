@@ -58,6 +58,7 @@ sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 # Install kubernetes
 brew install kubernetes-cli
 brew cask install minikube
+brew install watch
 # Download virtualbox from here
 # https://www.virtualbox.org/wiki/Downloads
 # If installation fails, check this
