@@ -5,6 +5,8 @@ brew doctor
 
 # Install git
 brew install git
+git config --global user.email "jaime.lee.rump@gmail.com"
+git config --global user.name "Jaime Rump"
 
 # Install thefuck
 brew install thefuck

@@ -10,6 +10,8 @@ choco install -y steam
 
 # Core developer tools
 choco install -y git.install
+git config --global user.email "jaime.lee.rump@gmail.com"
+git config --global user.name "Jaime Rump"
 
 # Editors
 choco install -y vscode
