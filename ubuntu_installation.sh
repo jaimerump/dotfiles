@@ -3,6 +3,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt-get install curl
 sudo apt install snapd
 
+# Windows interop utils
+sudo apt-get install exfat-fuse exfat-utils
+
 # Browsers
 sudo snap install firefox
 sudo snap install chromium
