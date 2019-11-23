@@ -7,6 +7,7 @@ choco install -y googlechrome
 choco install -y firefox
 choco install -y spotify
 choco install -y steam
+choco install -y brave --pre
 
 # Core developer tools
 choco install -y git.install
