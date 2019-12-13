@@ -29,6 +29,22 @@ sudo snap install go --classic
 sudo snap install ruby --classic
 sudo apt-get install python3.6
 sudo apt-get install openjdk-8-jdk
+# Install Java 13 for Clojure
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt update
+sudo apt install oracle-java13-installer
+sudo apt install oracle-java13-set-default
+# Clojure
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
+sudo mv lein /usr/local/bin/lein
+sudo chmod a+x /usr/local/bin/lein
+lein version
+
+sudo apt-get install -y bash curl rlwrap
+curl -O https://download.clojure.org/install/linux-install-1.10.1.462.sh
+chmod +x linux-install-1.10.1.462.sh
+sudo ./linux-install-1.10.1.462.sh
+clj 
 # Elixir
 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
 sudo apt-get install erlang
