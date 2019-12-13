@@ -11,6 +11,9 @@ sudo snap install firefox
 sudo snap install chromium
 sudo snap install inkdrop
 sudo snap install spotify
+sudo snap install slack --classic
+sudo apt install snapd-xdg-open
+sudo snap install discord
 
 # Development tools
 sudo apt install git
