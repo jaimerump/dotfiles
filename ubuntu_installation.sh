@@ -6,10 +6,11 @@ sudo apt install snapd
 # Windows interop utils
 sudo apt-get install exfat-fuse exfat-utils
 
-# Browsers
+# Browsers/Apps
 sudo snap install firefox
 sudo snap install chromium
 sudo snap install inkdrop
+sudo snap install spotify
 
 # Development tools
 sudo apt install git
