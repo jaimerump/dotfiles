@@ -24,6 +24,10 @@ sudo snap install go --classic
 sudo snap install ruby --classic
 sudo apt-get install python3.6
 sudo apt-get install openjdk-8-jdk
+# Elixir
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+sudo apt-get install erlang
+sudo apt-get install elixir
 
 # Data
 sudo apt install redis-server
