@@ -9,6 +9,7 @@ sudo apt-get install exfat-fuse exfat-utils
 # Browsers
 sudo snap install firefox
 sudo snap install chromium
+sudo snap install inkdrop
 
 # Development tools
 sudo apt install git
@@ -17,9 +18,12 @@ git config --global user.name "Jaime Rump"
 sudo snap install postman
 sudo snap install intellij-idea-community --classic
 sudo snap install code --classic
+sudo apt install thefuck
 
 # Programming languages
-sudo snap install node --classic
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install gcc g++ make
 sudo snap install go --classic
 sudo snap install ruby --classic
 sudo apt-get install python3.6
