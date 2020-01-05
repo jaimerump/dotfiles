@@ -15,6 +15,18 @@ sudo snap install slack --classic
 sudo apt install snapd-xdg-open
 sudo snap install discord
 
+# Flux
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
+sudo apt-get install fluxgui
+
+# Albert (Alfred equivalent)
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
+wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key -O Release.key
+sudo apt-key add - < Release.key
+sudo apt-get update
+sudo apt-get install albert
+
 # Development tools
 sudo apt install git
 git config --global user.email "jaime.lee.rump@gmail.com"
