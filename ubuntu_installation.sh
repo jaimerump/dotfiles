@@ -89,3 +89,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 # docker-compose command completion
 sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
+# Resize/Reposition screens for dual monitors
+# Assume 1920x1080 external monitor, double scale, side by side
+xrandr --output DP-1 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 0x0
+# Put built-in screen to the right of double scale 1920x1080 monitor
+xrandr --output eDP-1 --scale 1x1 --pos 3840x0
