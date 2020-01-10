@@ -34,7 +34,8 @@ git config --global user.name "Jaime Rump"
 sudo snap install postman
 sudo snap install intellij-idea-community --classic
 sudo snap install code --classic
-sudo apt install thefuck
+sudo apt install python3-dev python3-pip python3-setuptools
+sudo pip3 install thefuck
 
 # Programming languages
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -100,3 +101,7 @@ sudo apt install autorandr
 # Save and load settings
 autorandr --save work
 autorandr --change work
+# Reset when disconnecting
+xrandr --output eDP-1 --scale 1x1 --pos 0x0
+autorandr --save laptop
+autorandr --change laptop
