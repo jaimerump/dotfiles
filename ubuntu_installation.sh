@@ -95,3 +95,8 @@ sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/com
 xrandr --output DP-1 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 0x0
 # Put built-in screen to the right of double scale 1920x1080 monitor
 xrandr --output eDP-1 --scale 1x1 --pos 3840x0
+# Persist xrandr settings
+sudo apt install autorandr
+# Save and load settings
+autorandr --save work
+autorandr --change work
