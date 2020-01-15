@@ -26,6 +26,8 @@ wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu
 sudo apt-key add - < Release.key
 sudo apt-get update
 sudo apt-get install albert
+# Start albert on startup
+cp /usr/share/applications/albert.desktop ~/.config/autostart/ && chmod +x ~/.config/autostart/albert.desktop
 
 # Development tools
 sudo apt install git
