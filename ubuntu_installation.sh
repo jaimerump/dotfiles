@@ -75,6 +75,12 @@ sudo snap install postgresql
 sudo apt install mongodb
 sudo snap install robo3t-snap
 
+# Set up postgres
+sudo su postgres
+# Enter password 
+createuser martin-local -dlrP
+# Create password
+
 # Cloud
 sudo snap install aws-cli --classic
 sudo snap install google-cloud-sdk --classic
@@ -95,7 +101,7 @@ sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/com
 
 # Resize/Reposition screens for dual monitors
 # Assume 1920x1080 external monitor, double scale, side by side
-xrandr --output DP-1 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 0x0
+xrandr --output DP-2 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 0x0
 # Put built-in screen to the right of double scale 1920x1080 monitor
 xrandr --output eDP-1 --scale 1x1 --pos 3840x0
 # Persist xrandr settings
@@ -107,3 +113,7 @@ autorandr --change work
 xrandr --output eDP-1 --scale 1x1 --pos 0x0
 autorandr --save laptop
 autorandr --change laptop
+
+xrandr --output DP-2 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 3840x0 --primary
+xrandr --output eDP-1 --scale 1x1 --fb 7680x2160 --pos 0x0 
+autorandr --save home 
