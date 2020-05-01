@@ -43,7 +43,12 @@ sudo pip3 install thefuck
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install gcc g++ make
+# Go and Martin go dependencies
 sudo snap install go --classic
+go get -u golang.org/x/lint/golint
+go get -u google.golang.org/grpc
+go get github.com/golang/protobuf/protoc-gen-go@v1.3.4 
+
 sudo snap install ruby --classic
 sudo apt-get install python3.6
 sudo apt-get install openjdk-8-jdk
