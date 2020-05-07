@@ -76,14 +76,15 @@ sudo apt-get install elixir
 # Data
 sudo apt install redis-server
 sudo snap install redis-desktop-manager
-sudo snap install postgresql
+apt-get install postgresql-12
 sudo apt install mongodb
 sudo snap install robo3t-snap
 
 # Set up postgres
 sudo su postgres
 # Enter password 
-createuser martin-local -dlrP
+createdb martin-local
+createuser martin-local -dlrsP
 # Create password
 
 # Cloud
