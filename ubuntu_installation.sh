@@ -92,12 +92,15 @@ sudo snap install google-cloud-sdk --classic
 
 # Devops
 sudo snap install kubectl --classic
+sudo apt-get install virtualbox virtualbox-ext-pack
+sudo snap install kubectl --classic
+
+## Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add - 
 sudo apt-get update && sudo apt-get install terraform
-sudo apt-get install virtualbox virtualbox-ext-pack
-sudo snap install kubectl --classic
+
 
 # Install docker
 sudo apt-get install \
