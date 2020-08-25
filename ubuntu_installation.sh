@@ -44,7 +44,6 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install gcc g++ make
 # Go and Martin go dependencies
-sudo snap install go --classic
 go get -u golang.org/x/lint/golint
 go get -u google.golang.org/grpc
 go get github.com/golang/protobuf/protoc-gen-go@v1.3.4 
@@ -93,7 +92,10 @@ sudo snap install google-cloud-sdk --classic
 
 # Devops
 sudo snap install kubectl --classic
-sudo snap install terraform
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add - 
+sudo apt-get update && sudo apt-get install terraform
 sudo apt-get install virtualbox virtualbox-ext-pack
 sudo snap install kubectl --classic
 
