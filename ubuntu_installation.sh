@@ -83,6 +83,12 @@ apt-get install postgresql-12
 sudo apt install mongodb
 sudo snap install robo3t-snap
 
+# Scylla
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 5e08fbd8b5d6ec9c
+sudo curl -L --output /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/ubuntu/scylla-4.3-$(lsb_release -s -c).list
+sudo apt-get update
+sudo apt-get install -y scylla
+
 # Set up postgres
 sudo su postgres
 # Enter password 
