@@ -105,9 +105,8 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyr
 sudo apt-get update && sudo apt-get install google-cloud-sdk
 
 # Devops
-sudo snap install kubectl --classic
 sudo apt-get install virtualbox virtualbox-ext-pack
-sudo snap install kubectl --classic
+# Don't use snap for kubectl
 
 ## Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
