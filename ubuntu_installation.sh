@@ -42,19 +42,30 @@ sudo pip3 install thefuck
 # Programming languages
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
 sudo apt-get install gcc g++ make
+
 # Go and Martin go dependencies
 cd /tmp 
 curl -OL https://golang.org/dl/go1.14.7.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go*.tar.gz
-
+export PATH=/usr/local/go/bin:$PATH
 go get -u golang.org/x/lint/golint
 go get -u google.golang.org/grpc
 go get github.com/golang/protobuf/protoc-gen-go@v1.3.4 
 
 sudo snap install ruby --classic
-sudo apt-get install python3.6
+
+# Python
+sudo apt-get install python3.6 
+python -m pip install virtualenv
+python -m pip install jupyterlab
+
+# Java
 sudo apt-get install openjdk-8-jdk
+sudo apt install maven
+
 # Install Java 13 for Clojure
 sudo add-apt-repository ppa:linuxuprising/java
 sudo apt update
@@ -71,6 +82,7 @@ curl -O https://download.clojure.org/install/linux-install-1.10.1.462.sh
 chmod +x linux-install-1.10.1.462.sh
 sudo ./linux-install-1.10.1.462.sh
 clj 
+
 # Elixir
 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
 sudo apt-get install erlang
@@ -97,7 +109,10 @@ createuser martin-local -dlrsP
 # Create password
 
 # Cloud
-sudo snap install aws-cli --classic
+
+# AWS
+pip install awscli --upgrade --user
+
 # GCloud
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 sudo apt-get install apt-transport-https ca-certificates gnupg
@@ -106,14 +121,19 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 
 # Devops
 sudo apt-get install virtualbox virtualbox-ext-pack
-# Don't use snap for kubectl
+
+# kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+echo "$(<kubectl.sha256) kubectl" | sha256sum --check
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
 
 ## Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add - 
 sudo apt-get update && sudo apt-get install terraform
-
 
 # Install docker
 sudo apt-get install \
