@@ -100,6 +100,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 5e08fbd8b
 sudo curl -L --output /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/ubuntu/scylla-4.5-$(lsb_release -s -c).list
 sudo apt-get update
 sudo apt-get install -y scylla
+pip install cqlsh
 
 # Set up postgres
 sudo su postgres
