@@ -39,6 +39,13 @@ sudo snap install code --classic
 sudo apt install python3-dev python3-pip python3-setuptools
 sudo pip3 install thefuck
 
+# Airflow
+pip install apache-airflow==1.10.15
+pip install apache-airflow[postgres]==1.10.15
+airflow db init
+airflow users create --username jaimerump --firstname Jaime --lastname Rump --role Admin --email jaime.lee.rump@gmail.com
+
+
 # Programming languages
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -92,6 +99,7 @@ sudo apt-get install elixir
 sudo apt install redis-server
 sudo snap install redis-desktop-manager
 apt-get install postgresql-12
+go get -u github.com/pressly/goose/cmd/goose
 sudo apt install mongodb
 sudo snap install robo3t-snap
 
@@ -129,6 +137,9 @@ curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/b
 echo "$(<kubectl.sha256) kubectl" | sha256sum --check
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
+# Telepresence
+sudo curl -fL https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence -o /usr/local/bin/telepresence
+sudo chmod a+x /usr/local/bin/telepresence
 
 ## Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
