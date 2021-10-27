@@ -98,7 +98,9 @@ sudo apt-get install elixir
 # Data
 sudo apt install redis-server
 sudo snap install redis-desktop-manager
-apt-get install postgresql-12
+sudo apt install postgresql-common
+sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo apt-get install postgresql-12
 go get -u github.com/pressly/goose/cmd/goose
 sudo apt install mongodb
 sudo snap install robo3t-snap
@@ -111,6 +113,7 @@ sudo apt-get install -y scylla
 pip install cqlsh
 
 # Set up postgres
+sudo /etc/init.d/postgresql start
 sudo su postgres
 # Enter password 
 createdb martin-local
