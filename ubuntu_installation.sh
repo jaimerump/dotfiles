@@ -134,6 +134,9 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 # Devops
 sudo apt-get install virtualbox virtualbox-ext-pack
 
+# NATS
+wget https://github.com/nats-io/natscli/releases/download/v0.0.30/nats-0.0.30-amd64.deb && sudo dpkg -i nats-0.0.30-amd64.deb
+
 # kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
